@@ -1,6 +1,6 @@
 import React from 'react';
 
-const movieItem = (props) => {
+const MovieItem = (props) => {
 	return (
 		<>
 			{props.movies.map((movie, index) => (
@@ -12,4 +12,4 @@ const movieItem = (props) => {
 	);
 };
 
-export default movieItem;
+export default MovieItem;
