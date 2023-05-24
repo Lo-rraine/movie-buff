@@ -1,6 +1,6 @@
 body {
-	background: #141414;
-	color: #ffffff;
+	color: #141414;
+	margin: 4rem;
 }
 
 .movie-listing > .row {
@@ -9,6 +9,7 @@ body {
 }
 
 .image-container {
+	width: 600px;
 	position: relative;
 	transition: transform 0.2s;
 }
@@ -39,4 +40,12 @@ body {
 	flex-direction: row;
 	overflow-x: auto;
 	flex-wrap: nowrap;
+}
+
+.movie-image{
+	height: 400px;
+}
+
+.movie-details {
+	height: 200px;
 }
