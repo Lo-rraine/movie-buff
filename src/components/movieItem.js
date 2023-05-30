@@ -1,33 +1,44 @@
-import React from 'react';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 
 const MovieItem = (props) => {
-    const FavouriteComponent = props.favouriteComponent;
-    return (
-        <>
-            {props.movies.map((movie, index) => (
-                <div className='image-container justify-content-start m-3'>
+  const FavouriteComponent = props.favouriteComponent;
+  return (
+    <>
+      {props.movies.map((movie, index) => (
+        <div className="">
+          <Card sx={{ width: 320, margin: 4 }}>
+            <CardMedia
+              sx={{ height: 400 }}
+              image={movie.Poster}
+              title={movie.Title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                <strong>{movie.Title}</strong>
+              </Typography>
 
-                    <img src={movie.Poster} alt='movie' className='movie-image rounded'></img>
-
-                    <ul class="list-group list-group-flush text-center">
-                        <li className='list-group-item'><strong>{movie.Title}</strong></li>
-                        <li className='list-group-item'>Release Year - {movie.Year}</li>
-                        <li className='list-group-item'>imdID - {movie.imdbID}</li>
-                        <li className='list-group-item'>This is a {movie.Type}</li>
-                        <li className='list-group-item'>
-                            <div onClick={() => props.handleFavouritesClick(movie)}
-                                className=''>
-                                <FavouriteComponent />
-                            </div>
-                        </li>
-                    </ul>
-
-
-                </div>
-
-            ))}
-        </>
-    );
+              <Typography color="text.secondary">{movie.Year}</Typography>
+            </CardContent>
+            <CardActions>
+              <IconButton
+                onClick={() => props.handleFavouritesClick(movie)}
+                aria-label="add to favorites"
+              >
+                <FavoriteIcon />
+              </IconButton>
+            </CardActions>
+          </Card>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default MovieItem;

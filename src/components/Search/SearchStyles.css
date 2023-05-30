@@ -1,0 +1,10 @@
+.search-main {
+    width: 100%
+}
+
+.movie-listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
