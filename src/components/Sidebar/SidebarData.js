@@ -11,11 +11,6 @@ export const SidebarData = [
     link: "/search",
   },
   {
-    title: "Genres",
-    icon: <MovieRoundedIcon />,
-    link: "/genres",
-  },
-  {
     title: "My Favourites",
     icon: <FavoriteRoundedIcon />,
     link: "/myFavourites",

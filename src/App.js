@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 //import MovieItem from "./components/MovieItem";
@@ -14,6 +14,8 @@ import Genres from "./components/Genres/Genres";
 import Search from "./components/Search/Search";
 
 const App = () => {
+  const [favourites, setFavourites] = useState([]);
+
   return (
     <Router>
       <div className="App">
@@ -25,7 +27,10 @@ const App = () => {
           <Routes>
             <Route path="/search" exact element={<Search />} />
             <Route path="/genres" exact element={<Genres />} />
-            <Route path="/myfavourites" element={<MyFavourites />} />
+            <Route
+              path="/myfavourites"
+              element={<MyFavourites favourites={favourites} />}
+            />
           </Routes>
         </div>
       </div>

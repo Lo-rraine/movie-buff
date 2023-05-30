@@ -7,7 +7,7 @@ import API_KEY from "../../API_KEY";
 import "./SearchStyles.css";
 
 function Search() {
-  const [searchInputValue, setSearchInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("hello");
   const [movies, setMovies] = useState([]);
   const [favourites, setFavourites] = useState([]);
 
@@ -23,16 +23,6 @@ function Search() {
     }
   };
 
-  useEffect(() => {
-    getMovieDetails(searchInputValue);
-  }, [searchInputValue]);
-  useEffect(() => {
-    const storedMovieFaves = JSON.parse(
-      localStorage.getItem("movie-buff-faves")
-    );
-    setFavourites(storedMovieFaves);
-  }, []);
-
   const persistenceStorage = (items) => {
     localStorage.setItem("movie-buff-faves", JSON.stringify(items));
   };
@@ -42,6 +32,16 @@ function Search() {
     setFavourites(newFavouriteList);
     persistenceStorage(newFavouriteList);
   };
+
+  useEffect(() => {
+    getMovieDetails(searchInputValue);
+  }, [searchInputValue]);
+  useEffect(() => {
+    const storedMovieFaves = JSON.parse(
+      localStorage.getItem("movie-buff-faves")
+    );
+    setFavourites(storedMovieFaves || []);
+  }, []);
 
   return (
     <div className="search-main">

@@ -5,14 +5,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 
 const MovieItem = (props) => {
   const FavouriteComponent = props.favouriteComponent;
   return (
     <>
       {props.movies.map((movie, index) => (
-        <div className="">
+        <div className="" key={index}>
           <Card sx={{ width: 320, margin: 4 }}>
             <CardMedia
               sx={{ height: 400 }}
@@ -27,12 +26,12 @@ const MovieItem = (props) => {
               <Typography color="text.secondary">{movie.Year}</Typography>
             </CardContent>
             <CardActions>
-              <IconButton
+              <div
                 onClick={() => props.handleFavouritesClick(movie)}
-                aria-label="add to favorites"
+                className=""
               >
-                <FavoriteIcon />
-              </IconButton>
+                <FavouriteComponent />
+              </div>
             </CardActions>
           </Card>
         </div>
