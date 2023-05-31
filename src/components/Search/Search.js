@@ -1,24 +1,18 @@
-import React, { useState, useEffect } from "react";
-import Heading from "./Heading";
+import React from "react";
 import SearchInput from "../SearchInput";
 import MovieItem from "./MovieItem";
 import AddFavourites from "../AddFavourites";
-import API_KEY from "../../API_KEY";
 import "./SearchStyles.css";
 
 function Search({
   searchInputValue,
   setSearchInputValue,
   movies,
-  setMovies,
-  favourites,
-  setFavourites,
-  getMovieDetails,
   addFavouriteMovie,
 }) {
   return (
     <div className="search-main">
-      <div className="">
+      <div className="search-div">
         <SearchInput
           searchInputValue={searchInputValue}
           setSearchInputValue={setSearchInputValue}

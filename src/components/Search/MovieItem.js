@@ -1,9 +1,7 @@
 import React from "react";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
-//import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const MovieItem = (props) => {
-  const FavouriteComponent = props.favouriteComponent;
   return (
     <>
       {props.movies.map((movie, index) => (

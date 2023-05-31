@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-//import MovieItem from "./components/MovieItem";
-//import Heading from "./components/Heading";
-//import SearchInput from "./components/SearchInput";
-//import AddFavourites from "./components/AddFavourites";
-//import RemoveFavourites from "./components/RemoveFavourite";
 import API_KEY from "./API_KEY";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
