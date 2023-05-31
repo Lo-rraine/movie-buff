@@ -1,9 +1,5 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 //import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const MovieItem = (props) => {
@@ -11,29 +7,24 @@ const MovieItem = (props) => {
   return (
     <>
       {props.movies.map((movie, index) => (
-        <div className="" key={index}>
-          <Card sx={{ width: 320, margin: 4 }}>
-            <CardMedia
-              sx={{ height: 400 }}
-              image={movie.Poster}
-              title={movie.Title}
+        <div className="movie-card" key={index}>
+          <div className="movie-card-inner">
+            <h3 className="movie-card-heading">Movie Reccomendation</h3>
+            <img
+              className="movie-card-image"
+              src={movie.Poster}
+              alt={movie.Title}
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                <strong>{movie.Title}</strong>
-              </Typography>
-
-              <Typography color="text.secondary">{movie.Year}</Typography>
-            </CardContent>
-            <CardActions>
-              <div
-                onClick={() => props.handleFavouritesClick(movie)}
-                className=""
-              >
-                <FavouriteComponent />
-              </div>
-            </CardActions>
-          </Card>
+            <h3 className="movie-card-heading">{movie.Title}</h3>
+            <h3 className="movie-card-heading">{movie.Year}</h3>
+            <div
+              className="movie-action"
+              onClick={() => props.handleFavouritesClick(movie)}
+            >
+              <FavoriteRoundedIcon sx={{ color: "#3F3D56", fontSize: 26 }} />
+              <p className="movie-card-text">Add to Favourites</p>
+            </div>
+          </div>
         </div>
       ))}
     </>

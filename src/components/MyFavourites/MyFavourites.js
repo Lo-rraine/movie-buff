@@ -10,7 +10,7 @@ const MyFavourites = ({ favourites, removeFavouriteMovie }) => {
   };
 
   return (
-    <div>
+    <div className="bg">
       <div className="heading-container">
         <h1 className="heading">My Favourites</h1>
       </div>
