@@ -1,0 +1,29 @@
+.dev-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev-inner {
+    width: 60%;
+    height: 80%;
+    background-color: rgb(16, 16, 16, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev-image {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.dev-text {
+    padding-top: 12px;
+    width: 60%;
+}

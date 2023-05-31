@@ -5,7 +5,7 @@ import API_KEY from "./API_KEY";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MyFavourites from "./components/MyFavourites/MyFavourites";
-import Genres from "./components/Genres/Genres";
+import Dev from "./components/Dev/Dev";
 import Search from "./components/Search/Search";
 
 const App = () => {
@@ -78,7 +78,7 @@ const App = () => {
                 />
               }
             />
-            <Route path="/genres" exact element={<Genres />} />
+
             <Route
               path="/myfavourites"
               element={
@@ -88,6 +88,7 @@ const App = () => {
                 />
               }
             />
+            <Route path="/dev" exact element={<Dev />} />
           </Routes>
         </div>
       </div>
