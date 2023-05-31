@@ -3,7 +3,7 @@ import SearchInput from "../SearchInput";
 import AddFavourites from "../AddFavourites";
 import API_KEY from "../../API_KEY";
 import "./SearchStyles.css";
-import MovieItem from "../MovieItem";
+import MovieItem from "./MovieItem";
 
 function Search() {
   const [searchInputValue, setSearchInputValue] = useState("hello");
