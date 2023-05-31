@@ -36,6 +36,14 @@ const App = () => {
     persistenceStorage(newFavouriteList);
   };
 
+  const removeFavouriteMovie = (movie) => {
+    const newFavouriteList = favourites.filter(
+      (favourite) => favourite.imdbID !== movie.imdbID
+    );
+    setFavourites(newFavouriteList);
+    persistenceStorage(newFavouriteList);
+  };
+
   const persistenceStorage = (items) => {
     localStorage.setItem("movie-buff-faves", JSON.stringify(items));
   };
@@ -80,14 +88,8 @@ const App = () => {
               path="/myfavourites"
               element={
                 <MyFavourites
-                  searchInputValue={searchInputValue}
-                  setSearchInputValue={setSearchInputValue}
-                  movies={movies}
-                  setMovies={setMovies}
                   favourites={favourites}
-                  setFavourites={setFavourites}
-                  getMovieDetails={getMovieDetails}
-                  addFavouriteMovie={addFavouriteMovie}
+                  removeFavouriteMovie={removeFavouriteMovie}
                 />
               }
             />

@@ -1,21 +1,28 @@
-import React from "react";
-import Heading from "../Search/Heading";
+import React, { useState, useEffect } from "react";
+import MovieItem from "./MovieItem";
+import AddFavourites from "../AddFavourites";
+import RemoveFavourite from "../RemoveFavourite";
 
-function MyFavourites({ favourites }) {
+const MyFavourites = ({ favourites, removeFavouriteMovie }) => {
+  const handleRemoveClick = (movie) => {
+    removeFavouriteMovie(movie);
+  };
+
   return (
     <div>
-      <Heading
-        heading="Movie Buff"
-        text="Find and Keep track of all your favourite movies"
-      />
-
-      {favourites.length === 0 ? (
-        <p>No favorite movies yet.</p>
-      ) : (
-        <p>Faves coming soon</p>
-      )}
+      <h1>My Favourite Movies</h1>
+      {favourites.map((movie) => (
+        <div key={movie.imdbID}>
+          <h3>{movie.Title}</h3>
+          <p>{movie.Year}</p>
+          <img src={movie.Poster} alt={movie.Title} />
+          <button onClick={() => handleRemoveClick(movie)}>
+            Remove from Favourites
+          </button>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default MyFavourites;
