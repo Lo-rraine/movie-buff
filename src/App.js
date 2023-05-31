@@ -14,6 +14,8 @@ import Genres from "./components/Genres/Genres";
 import Search from "./components/Search/Search";
 
 const App = () => {
+  const [favourites] = useState([]);
+
   return (
     <Router>
       <div className="App">
