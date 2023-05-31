@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Heading from "./Heading";
 import SearchInput from "../SearchInput";
-import MovieItem from "../MovieItem";
 import AddFavourites from "../AddFavourites";
 import API_KEY from "../../API_KEY";
 import "./SearchStyles.css";
+import MovieItem from "../MovieItem";
 
 function Search() {
   const [searchInputValue, setSearchInputValue] = useState("hello");
