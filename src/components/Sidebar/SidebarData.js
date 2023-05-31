@@ -1,6 +1,5 @@
 import React from "react";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
-import MovieRoundedIcon from "@mui/icons-material/MovieRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 
