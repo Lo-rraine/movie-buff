@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import MovieItem from "./MovieItem";
-import AddFavourites from "../AddFavourites";
-import RemoveFavourite from "../RemoveFavourite";
+import React from "react";
+import "./Favourites.css";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 const MyFavourites = ({ favourites, removeFavouriteMovie }) => {
   const handleRemoveClick = (movie) => {
@@ -10,17 +11,37 @@ const MyFavourites = ({ favourites, removeFavouriteMovie }) => {
 
   return (
     <div>
-      <h1>My Favourite Movies</h1>
-      {favourites.map((movie) => (
-        <div key={movie.imdbID}>
-          <h3>{movie.Title}</h3>
-          <p>{movie.Year}</p>
-          <img src={movie.Poster} alt={movie.Title} />
-          <button onClick={() => handleRemoveClick(movie)}>
-            Remove from Favourites
-          </button>
+      <div className="heading-container">
+        <h1 className="heading">My Favourites</h1>
+      </div>
+      <div className="movie-container">
+        {favourites.map((movie) => (
+          <div key={movie.imdbID} className="movie-card">
+            <div className="movie-card-inner">
+              <h3 className="movie-card-heading">Movie Reccomendation</h3>
+              <img
+                className="movie-card-image"
+                src={movie.Poster}
+                alt={movie.Title}
+              />
+              <h3 className="movie-card-heading">{movie.Title}</h3>
+              <h3 className="movie-card-heading">{movie.Year}</h3>
+              <div
+                className="movie-action"
+                onClick={() => handleRemoveClick(movie)}
+              >
+                <DeleteIcon sx={{ color: "#3F3D56", fontSize: 26 }} />
+                <p className="movie-card-text">Remove</p>
+              </div>
+            </div>
+          </div>
+        ))}
+        <div className="add-more-fave">
+          <Link to="/search">
+            <AddCircleIcon sx={{ color: "white", fontSize: 200 }} />
+          </Link>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
