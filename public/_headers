@@ -1,2 +1,2 @@
 /* 
-Access-Control-Allow-Origin: www.omdbapi.com
+Access-Control-Allow-Origin: *
