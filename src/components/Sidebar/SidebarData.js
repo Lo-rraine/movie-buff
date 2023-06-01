@@ -7,7 +7,7 @@ export const SidebarData = [
   {
     title: "Search",
     icon: <SearchRoundedIcon />,
-    link: "/search",
+    link: "/",
   },
   {
     title: "My Favourites",

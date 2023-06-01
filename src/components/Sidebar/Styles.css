@@ -7,7 +7,7 @@
 .side-bar {
 height: 100%;
 width: 300px;
-background: linear-gradient(180deg, hsla(207, 98%, 60%, 0.4) 0%, hsla(293, 11%, 73%, 1) 22%);
+background: linear-gradient(180deg, hsla(294, 27%, 52%, 0.9) 0%, hsla(270, 81%, 15%, 0.7) 99%);
 position: fixed;
 overflow-x: hidden;
 }
@@ -72,4 +72,9 @@ overflow-x: hidden;
 a {
     text-decoration: none;
 }
+
+.list  .active {
+    background-color: #3F3D56;
+}
+
 
