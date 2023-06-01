@@ -63,7 +63,7 @@ const App = () => {
         <div className="main">
           <Routes>
             <Route
-              path="/search"
+              path="/"
               exact
               element={
                 <Search

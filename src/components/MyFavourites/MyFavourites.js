@@ -37,7 +37,7 @@ const MyFavourites = ({ favourites, removeFavouriteMovie }) => {
           </div>
         ))}
         <div className="add-more-fave">
-          <Link to="/search">
+          <Link to="/">
             <AddCircleIcon sx={{ color: "white", fontSize: 200 }} />
           </Link>
         </div>

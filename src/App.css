@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
+
 body {
 	color: white;
 	background-color:  #3F3D56;
-	background: linear-gradient(360deg, hsla(245, 17%, 29%, 1) 0%, hsla(0, 0%, 100%, 0) 100%),url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876005.jpg?w=1380&t=st=1685565863~exp=1685566463~hmac=d0216272511d761392fcf8d09d7ffdaa51ec3a0c8bd0a81dd4faacf390167551");
+	background: linear-gradient(360deg, hsla(245, 17%, 29%, 1) 0%, hsla(0, 0%, 100%, 0) 100%),url("./assets/background.jpg");
     background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -12,6 +13,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	height: auto;
 }
+
 
 .movie-listing > .row {
 	overflow-x: auto;
