@@ -15,7 +15,7 @@ const App = () => {
 
   //search functionality with variable input
   const getMovieDetails = async (searchInputValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchInputValue}&apikey=${API_KEY}`;
+    const url = `https://www.omdbapi.com/?s=${searchInputValue}&apikey=${API_KEY}`;
 
     const response = await fetch(url);
     const responseJSON = await response.json();
