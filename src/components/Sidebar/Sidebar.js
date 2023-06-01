@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function Sidebar() {
   const location = useLocation();
-  const [SelectedLink, setSelectedLink] = useState("/");
+  const [selectedLink, setSelectedLink] = useState("/");
 
   // Set the selected link based on the current location
   useState(() => {
@@ -23,7 +23,7 @@ function Sidebar() {
         {SidebarData.map((val, key) => {
           return (
             <li
-              id={SelectedLink === val.link ? "active" : ""}
+              id={selectedLink === val.link ? "active" : ""}
               className="row"
               key={key}
             >
