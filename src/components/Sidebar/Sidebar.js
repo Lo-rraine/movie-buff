@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function Sidebar() {
   const location = useLocation();
-  const [selectedLink, setSelectedLink] = useState("/");
+  const [setSelectedLink] = useState("/");
 
   // Set the selected link based on the current location
   useState(() => {
